@@ -1,10 +1,35 @@
-.hide {
-    display: none;
+.searcharea {
+    background-color: #e6f2ff;
+    padding: 20px;
 }
 
-.show {
-    display: block;
+.uvindex {
+    padding: 5px;
 }
-.card-title{
-font-weight: bold;
+
+.one-fifth {
+    box-sizing: border-box;
+    width: 20%;
+    margin: 3px;
+    
+}
+
+.one-fifth:first-child {
+    margin-left: 0px;
+}
+
+.one-fifth:last-child{
+    margin-right: 0px;
+}
+
+.forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+#searchbtn{
+    padding: 6px 5px 0px 5px;
+
 }

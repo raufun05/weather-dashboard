@@ -1,76 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather Dashboard Application</title>
 
-    <!-- Bootstrap Link-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Font Awesome link-->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <title>Weather Dashboard Application</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ca89a4b9f5.js" crossorigin="anonymous"></script>
-    <!-- My style sheet -->
-    <link rel="stylesheet" href="Assets/style.css">
+    <link href="Assets/style.css" rel="stylesheet">
+
     
 </head>
-    <body>
 
+<body>
     <!-- Header -->
     <div class="bg-dark pt-2 pb-2"> 
-            <h1 class="text-center text-white"><i class="fas fa-sun"></i>Weather Dashboard<i class="fas fa-cloud-sun-rain"></i></h1>
+        <h1 class="text-center text-white"><i class="fas fa-sun"></i>Weather Dashboard<i class="fas fa-cloud-sun-rain"></i></h1>
     </div>
-    <!-- container -->
-    <div class="container-fluid"> 
-
-        <!-- Start row -->
-        <div class="row"> 
-
-            <!-- Start column -->
-            <div class="col-md-3 bg-light pt-3 pb-3"> 
-
-                <h5>Search for a city:</h5>
-
-                <!-- Start input group -->
-                <div class="input-group mb-2"> 
-                    <input id="input-city" type="text" class="form-control" placeholder="Enter city name" class="input-group-append">
-                    <button id="search-button" class="btn btn-primary" type="button" id="button-addon2"><i class="far fa-search"></i></button>
-                </div> 
-
-                <!-- Start card -->
-                <div class="card"> 
-                    <ul class="list-group list-group-flush list">
-                    </ul>
-                </div> 
-                <!-- End card -->
-            </div> 
-            <!-- End column -->
-
-            <!-- Start column -->
-            <div class="col-md-9"> 
-                <div id="cityWeatherInfo" class="mt-4">
-                    
+    <!-- start container -->
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-md-3 searcharea">
+                <h3>Search for a city:</h3>
+                <!-- input & search button -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="searchinput" placeholder="Enter city name" type="search" aria-label="Search">
+                    <div class="input-group-append">
+                        <button id="search-button" class="btn btn-primary" type="button" id="button-addon2"><i class="far fa-search"></i></button>
+                    </div>
                 </div>
-            </div> 
-            <!-- End column -->
-        </div> 
-        <!-- End row -->
+                <!-- city lists  -->
+                <div class="mt-3" id="prevSearches">
+                </div>
+            </div>
+            <!-- 5-days weather information for city -->
+            <div class="col-md-9">
+                <div class="container" id="weatherForecast">
+                </div>
+            </div>
+        </div>
 
-        <!-- Start forecast container -->
-        <div class="mt-4 col-md-12"> 
+    </div>
 
-            <h5 id="weather-forecast" class="mt-3 hide">5-Days Forecast:</h5>
-
-            <!-- Start row -->
-            <div id="day-forecast" class="row"> 
-
-
-            </div> 
-        </div> 
-    </div> 
-    
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="Assets/script.js"></script>
 </body>
+
 </html>
